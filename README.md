@@ -4,6 +4,10 @@ Ethereum, Solidity and Smart Contract code and research material to help train t
 Deploy the contracts
 ===
 In order to deploy a contract, open the file, copy its contents and paste into Remix, then go compile and deploy into the network.
+After opening Remix (offline or online) remember that you can change the workspace/project in the top left corder.
+
+![Remix Workspace](LN002.png "Environment")
+
 I recommend using the Desktop Remix with an internal ledger (Remix VM) to execute the contracts, but you can also use the testnet (Sepolia)
 by using the online version and choosing the Injected Provider for the environment.
 

@@ -30,11 +30,56 @@ contract HelloWorld {
 }
 ```
 
-## Contract 1 (ETHUSD-Feed) (no division)
-0x78aA35ac1CE4D1F0e82a278437E87840B6b15743
+## Contract 2 (ETHUSD-Feed)
+Ethereum/USD Price Feed rounded
 
-## Contract 2 (ETHUSD-Feed2) (with division)
-0x8F883835A428fF793d664c34C2721AEA6cB78b7F
+```solidity
+pragma solidity ^0.8.7;
+
+import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol";
+
+contract ETHUSDContract {
+	...
+
+    constructor() {
+        owner = msg.sender;
+        dataFeed = AggregatorV3Interface(
+            0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43
+        );
+
+        etherUSDFeed = AggregatorV3Interface(
+            0x694AA1769357215DE4FAC081bf1f309aDC325306
+        );
+    }
+
+    function deposit() public payable {
+    	//...
+    }
+
+    function withdrawal(uint amount) public {
+    	//...
+    }
+
+    function getBalance() public view returns (uint256) {
+    	//...
+    }
+
+    function getETHUSD() public view returns (int) {
+        // prettier-ignore
+        (
+            /* uint80 roundID */,
+            int answer,
+            /*uint startedAt*/,
+            /*uint timeStamp*/,
+            /*uint80 answeredInRound*/
+        ) = etherUSDFeed.latestRoundData();
+        int etherUsd = answer / 100000000.0;
+        return etherUsd;
+    }
+
+}
+```
+
 
 # Relevant Links
 * [Remix Editor Online](https://remix.ethereum.org/)

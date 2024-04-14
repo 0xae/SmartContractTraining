@@ -31,7 +31,9 @@ contract HelloWorld {
 ```
 
 ## Contract 2 (ETHUSD-Feed)
-Ethereum/USD Price Feed rounded
+Ethereum/USD Price Feed based on ChainLink ETH/USD Feed(contract: 0x694AA1769357215DE4FAC081bf1f309aDC325306) rounded. 
+Other methods were removed in order to showcase the important sections.
+View complete code [here](./contracts/DataFeedWallet.sol)
 
 ```solidity
 pragma solidity ^0.8.7;
@@ -39,8 +41,7 @@ pragma solidity ^0.8.7;
 import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol";
 
 contract ETHUSDContract {
-	...
-
+	//...
     constructor() {
         owner = msg.sender;
         dataFeed = AggregatorV3Interface(

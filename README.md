@@ -1,5 +1,5 @@
 # Smart Contract Training
-Ethereum, Solidity and Smart Contract company code and research material to help train the next generation of Blockchain Engineers.
+Ethereum, Solidity and Smart Contract code and research material to help train the next generation of Blockchain Engineers.
 
 Deploy the contracts
 ===

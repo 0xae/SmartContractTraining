@@ -10,8 +10,10 @@ Ethereum, Solidity and Smart Contract company code and research material to help
 # Relevant Links
 * [Remix Editor Online](https://remix.ethereum.org/)
 * [Remix Desktop (Download)](https://github.com/ethereum/remix-desktop/releases)
-* [Metamax Wallet](https://metamask.io/))
+* [Metamax Wallet](https://metamask.io/)
 * [Sepolia Testnet](https://sepolia.etherscan.io/)
 * [Chain Link Docs](https://docs.chain.link/)
 * [Getting Started Chain Link](https://docs.chain.link/data-streams/getting-started)
 * [Introduction to Solidity](https://docs.soliditylang.org/en/v0.8.25/introduction-to-smart-contracts.html)
+
+* [ChainLink TOKEN no Sepolia](https://sepolia.etherscan.io/token/0x779877a7b0d9e8603169ddbd7836e478b4624789?a=0xa285a56bb18cb9b41347efd9720066322c3468fa)

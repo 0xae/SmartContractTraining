@@ -66,7 +66,6 @@ contract ETHUSDContract {
     }
 
     function getETHUSD() public view returns (int) {
-        // prettier-ignore
         (
             /* uint80 roundID */,
             int answer,

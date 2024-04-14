@@ -4,7 +4,31 @@ Ethereum, Solidity and Smart Contract code and research material to help train t
 Deploy the contracts
 ===
 In order to deploy a contract, open the file, copy its contents and paste into Remix, then go compile and deploy into the network.
-I recommend using the internal ledger (Remix VM) to learn and execute these contracts, but you can also use the testnet (Sepolia)
+I recommend using the Desktop Remix with an internal ledger (Remix VM) to execute the contracts, but you can also use the testnet (Sepolia)
+by using the online version and choosing the Injected Provider for the environment.
+
+![Environment](LN001.png "Environment")
+
+
+Example
+====
+This is a simple contract that we can deploy and examine.
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.7;
+
+contract HelloWorld {
+    string public message;
+
+    constructor(string memory initialMessage) {
+        message = initialMessage;
+    }
+
+    function updateMessage(string memory newMessage) public {
+        message = newMessage;
+    }
+}
+```
 
 ## Contract 1 (ETHUSD-Feed) (no division)
 0x78aA35ac1CE4D1F0e82a278437E87840B6b15743

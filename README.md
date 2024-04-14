@@ -14,6 +14,8 @@ by using the online version and choosing the Injected Provider for the environme
 ![Environment](LN001.png "Environment")
 
 If you choose metamask, open the wallet and aprove the connection:
+
+
 ![Connect Metamask](LN003.png "Connect To Metamask")
 
 

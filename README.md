@@ -39,6 +39,14 @@ contract HelloWorld {
 }
 ```
 
+## InvestmentFund
+This is basic not 100% ready functional implementation of an Investment Fund. Invidual investors (Shareholders) deposit funds
+into the smart contract which become available to the contract investor and coInvestor to purchase Coins, Tokens, Contracts which
+should be also stored inside the contract
+
+* Address (0x40BbA404d51e951FeeC83078bec24AE367546978)
+* ([Explorer Address](https://sepolia.etherscan.io/address/0x40BbA404d51e951FeeC83078bec24AE367546978))
+
 ## Contract 2 (ETHUSD-Feed)
 Ethereum/USD Price Feed based on ChainLink ETH/USD Feed(contract: 0x694AA1769357215DE4FAC081bf1f309aDC325306) rounded. 
 Other methods were removed in order to showcase the important sections.

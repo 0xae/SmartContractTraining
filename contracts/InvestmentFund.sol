@@ -10,21 +10,19 @@ contract InvestmentFund {
     }
 
     mapping(address => ShareHolder) private _shareholders;
-    address investor;
-    address coInvestor;
-    uint256 maxInvestable;
-    string FundName;
+    address internal investor;
+    address internal coInvestor;
+    uint256 public maxInvestable;
 
     event Deposited(address indexed payee, uint256 weiAmount);
     event Withdrawn(address indexed payee, uint256 weiAmount);
     event NewInvestor(address indexed invest, string klass, uint256 weiAmount);
 
-    constructor(string memory ContractNameX) {
-        FundName = ContractNameX;
+    constructor() {
         investor = msg.sender; // contract creator is the investor
     }
 
-    function setMaxInvestable(uint256 amount) public {
+    function setMaxInvestableByCoInvestor(uint256 amount) public {
         require(msg.sender==investor, "Investor Only");
         maxInvestable = amount;
     }
@@ -35,8 +33,16 @@ contract InvestmentFund {
     }
 
     // Get Fund Balance
-    function getBalance() public view returns (uint256) {
+    function getBalance() view public  returns (uint256) {
         return address(this).balance;
+    }
+
+    function myBalance() view public returns (uint256) {
+        address payee = msg.sender;
+        // if (!_shareholders[payee].IsActive) {
+        //     require(false, "You are not an investor");
+        // }
+        return _shareholders[payee].Amount;
     }
 
     function join() public payable {
@@ -53,7 +59,7 @@ contract InvestmentFund {
         });
     }
 
-    function deposit() public  payable {
+    function deposit() public payable {
         // require(msg.value == amount, "Amount not available");
         require(msg.value > 0, "Amount must not be zero");
         address payee = msg.sender;
@@ -67,9 +73,15 @@ contract InvestmentFund {
         emit Deposited(payee, amount);
     }
 
-    function withdraw(uint amount) public {
-        // require(address(this).balance > amount, "amount not available");
-        // payable(msg.sender).transfer(amount);
+    function invest(uint amount, address asset, string memory label) public {
+    }
+
+    function withdraw(uint amount, address addr) public {
+        require(address(this).balance >= amount, "amount not available");
+        // requires that its either the investor or the coInvestor requesting amount less set
+        require(msg.sender == investor || (msg.sender==coInvestor&&amount<maxInvestable),
+            "Must be investor or coInvestor");
+        payable(addr).transfer(amount);
     }
 
 }

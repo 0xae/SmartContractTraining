@@ -47,6 +47,25 @@ should be also stored inside the contract
 * Address (0x40BbA404d51e951FeeC83078bec24AE367546978)
 * ([Explorer Address](https://sepolia.etherscan.io/address/0x40BbA404d51e951FeeC83078bec24AE367546978))
 
+## StakingRewards
+Pays users reward for staking their token in the contract. The Stake Token and Reward Token are
+specified in the contructor, so at the contract deployment phase.
+An instance of StakingRewards have been deployed for LINK/WBTC. So you receive wrapped BTC for staking your LINK.
+Address of interaction displayed bellow:
+
+* Address (0x34a349064c336aF691960AE665c826790BFdBDC3)
+* ([Explorer Address](https://sepolia.etherscan.io/address/0x34a349064c336aF691960AE665c826790BFdBDC3))
+* [Ref](https://solidity-by-example.org/defi/staking-rewards/)
+
+## FundShares
+FundShares are the token used to represent ownership of the InvestmentFunds.
+Payouts are payed to each FundShares periodically, users can buy, sell, transfer FundShares freely.
+Each FundShares has a price of min 1289 WEI. This limit can be changed according to the contract owner needs.
+
+* Address (0x6Ed267caDDa8F9C97AffA365afE7b61914Fb1A61)
+* [Token Address](https://sepolia.etherscan.io/token/0x6Ed267caDDa8F9C97AffA365afE7b61914Fb1A61)
+
+
 ## Contract 2 (ETHUSD-Feed)
 Ethereum/USD Price Feed based on ChainLink ETH/USD Feed(contract: 0x694AA1769357215DE4FAC081bf1f309aDC325306) rounded. 
 Other methods were removed in order to showcase the important sections.

@@ -13,6 +13,16 @@ Learn more about [Sepolia on the ethereum website](https://ethereum.org/pcm/deve
 
 Also about [L2 Networks Testnets:](https://ethereum.org/pcm/developers/docs/networks/#layer-2-testnets)
 
+## Tools
+* [web3js wallets & accounts](https://docs.web3js.org/guides/wallet/)
+* [local wallet](https://docs.web3js.org/guides/wallet/local_wallet)
+* [web3js read the docs](https://web3js.readthedocs.io/en/v1.2.11/web3-eth-accounts.html#wallet-add)
+* [solidity intro to smart-contracts](https://docs.soliditylang.org/en/v0.8.25/introduction-to-smart-contracts.html)
+* [by example call contract](https://solidity-by-example.org/calling-contract/)
+* [Connect to metamask web3js](https://docs.web3js.org/guides/getting_started/metamask)
+* [hardhat](https://hardhat.org/hardhat-runner/docs/getting-started)
+
+
 ### Connect  web3.js to sepolia
 
 ```javascript
